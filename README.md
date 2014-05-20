@@ -42,6 +42,7 @@ vagrant reload  // restart the vm
 ```
 ```
 jekyll --help
+jekyll serve --port 80 --verbose --watch
 ```
 
 Cookbooks
