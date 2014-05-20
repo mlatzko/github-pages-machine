@@ -37,6 +37,9 @@ end
 
 execute "install ruby v.#{node['ruby']['version']} - set lock file" do
   command "touch /var/opt/ruby-installed"
+  not_if do
+    File.exists?("/var/opt/ruby-installed")
+  end
   user "root"
   action :run
 end

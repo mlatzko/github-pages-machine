@@ -32,6 +32,9 @@ end
 
 execute "install rubygems v.#{node['rubygems']['version']} - set lock file" do
   command "touch /var/opt/rubygems-installed"
+  not_if do
+    File.exists?("/var/opt/rubygems-installed")
+  end
   user "root"
   action :run
 end
