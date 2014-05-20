@@ -66,7 +66,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
-  #
   config.vm.provision :chef_solo do |chef|
 
     # Loglevel Debug: useful to debug cookbooks. Hat-Tip to @klimpong

@@ -1,4 +1,4 @@
-website-jekyll-environment (virtual box + vagrant)
+github-pages-machine (virtual box + vagrant)
 ==================================================================
 
 Software to download:
@@ -7,6 +7,10 @@ Software to download:
 * VirtualBox - https://www.virtualbox.org/wiki/Downloads
 * Vagrant - http://downloads.vagrantup.com/
 * Putty - http://www.putty.org
+
+**Versions:**
+* VirtualBox 4.2.2.22
+* vagrant
 
 Start the VM:
 ------------------------------------------------------------------
