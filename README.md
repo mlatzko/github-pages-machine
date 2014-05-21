@@ -8,9 +8,9 @@ Software to download:
 * Vagrant - http://downloads.vagrantup.com/
 * Putty - http://www.putty.org
 
-**Versions:**
-* VirtualBox 4.2.2.22
-* vagrant
+** Tested with:**
+* VirtualBox 4.2.22 r91556
+* Vagrant 1.4.3
 
 Installation:
 ------------------------------------------------------------------
@@ -60,4 +60,5 @@ Links
 ------------------------------------------------------------------
 * https://www.virtualbox.org/
 * http://www.vagrantbox.es/
-* http://jekyllrb.com/
+* https://help.github.com/articles/using-jekyll-with-pages
+
