@@ -12,6 +12,11 @@ Software to download:
 * VirtualBox 4.2.2.22
 * vagrant
 
+Installation:
+------------------------------------------------------------------
+Checkout this repository and create a folder "aptcache" with the
+directory.
+
 Start the VM:
 ------------------------------------------------------------------
 In general we assume that every developer has an 64Bit system. If you
