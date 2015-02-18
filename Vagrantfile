@@ -24,7 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.gui = false
 
     # Use VBoxManage to customize the VM. For example to change memory:
-    vb.customize ["modifyvm", :id, "--memory", "2048","--cpus", "2"]
+    vb.customize ["modifyvm", :id, "--memory", "4096","--cpus", "4"]
   end
 
   # Create a forwarded port mapping which allows access to a specific port
@@ -69,7 +69,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :chef_solo do |chef|
 
     # Loglevel Debug: useful to debug cookbooks. Hat-Tip to @klimpong
-    chef.log_level = :debug
+    # chef.log_level = :debug
 
     # path to cookbooks
     chef.cookbooks_path = "cookbooks"
