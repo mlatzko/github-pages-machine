@@ -28,7 +28,7 @@ Useful Commands:
 ------------------------------------------------------------------
 ```
 jekyll --help
-jekyll serve --port 80 --verbose --watch
+sudo jekyll serve --port 80 --verbose --watch
 ```
 
 Useful Links:
