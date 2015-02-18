@@ -35,4 +35,4 @@ Useful Links:
 ------------------------------------------------------------------
 * https://www.virtualbox.org/
 * http://www.vagrantbox.es/
-* https://help.github.com/articles/using-jekyll-with-pages
+* http://jekyllrb.com/
