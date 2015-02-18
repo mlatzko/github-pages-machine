@@ -1,6 +1,6 @@
 #
-# Cookbook Name:: ruby
-# Recipe:: gem-github-pages
+# Cookbook Name:: make
+# Attributes:: default
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,21 +14,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-execute "install gem 'github-pages'" do
-  command "gem install github-pages"
-  not_if do
-    File.exists?("/var/opt/gem-gitgub-pages-installed")
-  end
-  user "root"
-  action :run
-end
-
-execute "install gem 'github-pages' - set lock file" do
-  command "touch /var/opt/gem-gitgub-pages-installed"
-  not_if do
-    File.exists?("/var/opt/gem-gitgub-pages-installed")
-  end
-  user "root"
-  action :run
-end

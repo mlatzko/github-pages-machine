@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: ruby
+# Cookbook Name:: github-pages
 # Recipe:: default
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,5 +20,5 @@ include_recipe "rubygems"
 include_recipe "nodejs"
 
 include_recipe "github-pages::gem-bundler"
-include_recipe "github-pages::gem-github-page"
+include_recipe "github-pages::gem-github-pages"
 include_recipe "github-pages::jekyll-server"

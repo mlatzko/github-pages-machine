@@ -1,6 +1,6 @@
 #
-# Cookbook Name:: nodejs
-# Recipe:: default
+# Cookbook Name:: github-pages
+# Recipe:: gem-github-pages
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,10 +15,20 @@
 # limitations under the License.
 #
 
-include_recipe "apt"
+execute "install gem 'github-pages'" do
+  command "gem install github-pages"
+  not_if do
+    File.exists?("/var/opt/gem-gitgub-pages-installed")
+  end
+  user "root"
+  action :run
+end
 
-execute "install nodejs" do
-  command "apt-get -y install nodejs"
+execute "install gem 'github-pages' - set lock file" do
+  command "touch /var/opt/gem-gitgub-pages-installed"
+  not_if do
+    File.exists?("/var/opt/gem-gitgub-pages-installed")
+  end
   user "root"
   action :run
 end
