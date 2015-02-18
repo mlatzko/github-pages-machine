@@ -15,12 +15,14 @@
 # limitations under the License.
 #
 
-#
-# Temporally deactivated, because it's not working as expected.
-#
+execute "kill all possible jekyll processes" do
+  command "kill -9 $(ps opid= -C jekyll) &> /dev/null"
+  user "root"
+  action :run
+end
 
-#execute "jekyll serve 'localhost:80'" do
-#  command "jekyll serve --port 80 --watch --detach --source /var/www/mlatzko.github.io"
-#  user "root"
-#  action :run
-#end
+execute "start jekyll 'http://jkeyll-website:80'" do
+  command "jekyll serve --port 80 --detach --source /var/www/jkeyll-website/"
+  user "root"
+  action :run
+end
