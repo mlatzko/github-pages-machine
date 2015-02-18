@@ -23,7 +23,7 @@ include_recipe "make"
 #
 bash "install ruby v.#{node['ruby']['version']}" do
   code <<-EOH
-    wget http://cache.ruby-lang.org/pub/ruby/2.0/ruby-#{node['ruby']['version']}.tar.gz
+    wget http://cache.ruby-lang.org/pub/ruby/#{node['ruby']['folder']}/ruby-#{node['ruby']['version']}.tar.gz
     tar -xzvf ruby-#{node['ruby']['version']}.tar.gz
     cd ruby-#{node['ruby']['version']}
     ./configure

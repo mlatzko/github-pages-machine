@@ -15,4 +15,5 @@
 # limitations under the License.
 #
 
+default['ruby']['folder']  = '2.0'
 default['ruby']['version'] = '2.0.0-p481'
