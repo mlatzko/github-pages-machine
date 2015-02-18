@@ -63,6 +63,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # website
   config.vm.synced_folder "../website", "/var/www/mlatzko.github.io", :mount_options => ["uid=33"]
 
+  # iconicfuture.com
+  config.vm.synced_folder "../if-website", "/var/www/iconicfuture.com", :mount_options => ["uid=33"]
+
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
@@ -78,5 +81,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "apt"
     chef.add_recipe "make"
     chef.add_recipe "ruby"
+    chef.add_recipe "nodejs"
+    chef.add_recipe "rubygems"
+    chef.add_recipe "github-pages"
+
   end
 end

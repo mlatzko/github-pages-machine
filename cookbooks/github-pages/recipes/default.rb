@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: ruby
-# Attributes:: default
+# Recipe:: default
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,4 +15,10 @@
 # limitations under the License.
 #
 
-default['ruby']['version'] = '2.0.0-p481'
+include_recipe "ruby"
+include_recipe "rubygems"
+include_recipe "nodejs"
+
+include_recipe "github-pages::gem-bundler"
+include_recipe "github-pages::gem-github-page"
+include_recipe "github-pages::jekyll-server"

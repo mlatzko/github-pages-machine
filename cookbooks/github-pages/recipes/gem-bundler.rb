@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: ruby
-# Attributes:: default
+# Recipe:: gem-bundler
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,4 +15,20 @@
 # limitations under the License.
 #
 
-default['ruby']['version'] = '2.0.0-p481'
+execute "install gem 'bundler'" do
+  command "gem install bundler"
+  not_if do
+    File.exists?("/var/opt/gem-bundler-installed")
+  end
+  user "root"
+  action :run
+end
+
+execute "install gem 'bundler' - set lock file" do
+  command "touch /var/opt/gem-bundler-installed"
+  not_if do
+    File.exists?("/var/opt/gem-bundler-installed")
+  end
+  user "root"
+  action :run
+end

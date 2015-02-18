@@ -1,64 +1,38 @@
 github-pages-machine (virtual box + vagrant)
 ==================================================================
 
-Software to download:
+Software required to be installed before:
 ------------------------------------------------------------------
 **Windows:**
 * VirtualBox - https://www.virtualbox.org/wiki/Downloads
 * Vagrant - http://downloads.vagrantup.com/
 * Putty - http://www.putty.org
+* GitHub - https://windows.github.com/
 
-** Tested with:**
-* VirtualBox 4.2.22 r91556
-* Vagrant 1.4.3
+**Tested with:** VirtualBox 4.3, Vagrant 1.6.5
 
-Installation:
+Cookbooks & receipts based on the requirements defined on:
 ------------------------------------------------------------------
-Checkout this repository and create a folder "aptcache" with the
-directory.
+https://help.github.com/articles/using-jekyll-with-pages
 
-Start the VM:
+Cookbooks:
 ------------------------------------------------------------------
-In general we assume that every developer has an 64Bit system. If you
-don't just change the configuration values of the following parameters:
-```
-config.vm.box = "" // precise64 or precise32
-```
-```
-config.vm.box_url = "" // http://files.vagrantup.com/precise64.box or http://files.vagrantup.com/precise32.box
-```
-Open a console and change over to the checkout repository.
-Start the VM by running the command:
-```
-vagrant up
-```
-**Long story short or what happens after executing "vagrant up".**
+* apt
+* github-pages
+* nodejs
+* make
+* ruby
+* rubygems
 
-The first time you start building the machine vagrant will start downloading
-the vagrant box (precise64) which is ~330MB. So please make sure you have a
-well internet connection. Afterward ruby and it dependencies will be
-installed, followed by Jekyll.
-
-Useful Commands
+Useful Commands:
 ------------------------------------------------------------------
-```
-vagrant destroy // destroy the vm
-vagrant reload  // restart the vm
-```
 ```
 jekyll --help
 jekyll serve --port 80 --verbose --watch
 ```
 
-Cookbooks
-------------------------------------------------------------------
-* apt
-* make
-* ruby
-
-Links
+Useful Links:
 ------------------------------------------------------------------
 * https://www.virtualbox.org/
 * http://www.vagrantbox.es/
 * https://help.github.com/articles/using-jekyll-with-pages
-

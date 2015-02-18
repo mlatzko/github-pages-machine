@@ -15,6 +15,8 @@
 # limitations under the License.
 #
 
+include_recipe "apt"
+
 execute "install build utility 'make'" do
   command "apt-get -y install make"
   user "root"

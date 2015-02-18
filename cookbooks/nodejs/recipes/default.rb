@@ -16,30 +16,9 @@
 #
 
 include_recipe "apt"
-include_recipe "make"
 
-#
-# install ruby
-#
-bash "install ruby v.#{node['ruby']['version']}" do
-  code <<-EOH
-    wget http://cache.ruby-lang.org/pub/ruby/2.0/ruby-#{node['ruby']['version']}.tar.gz
-    tar -xzvf ruby-#{node['ruby']['version']}.tar.gz
-    cd ruby-#{node['ruby']['version']}
-    ./configure
-    make &&
-    make install
-    cd ..
-    rm -rf #{node['ruby']['version']}*
-  EOH
-  not_if { ::File.exists?("/var/opt/ruby-installed") }
-end
-
-execute "install ruby v.#{node['ruby']['version']} - set lock file" do
-  command "touch /var/opt/ruby-installed"
-  not_if do
-    File.exists?("/var/opt/ruby-installed")
-  end
+execute "install nodejs" do
+  command "apt-get -y install nodejs"
   user "root"
   action :run
 end
