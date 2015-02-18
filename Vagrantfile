@@ -58,10 +58,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # files.
   config.vm.synced_folder "aptcache", "/var/cache/apt/archives/"
 
-  # mounting projects
+  # Folder to be mounted within the VM.
 
-  # website
-  config.vm.synced_folder "../website", "/var/www/jkeyll-website", :mount_options => ["uid=33"]
+  # jekyll website
+  config.vm.synced_folder "../website", "/var/www/jkeyll-website", :mount_options => ["uid=33", "dmode=777", "fmode=777"]
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
@@ -69,7 +69,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :chef_solo do |chef|
 
     # Loglevel Debug: useful to debug cookbooks. Hat-Tip to @klimpong
-    # chef.log_level = :debug
+    chef.log_level = :debug
 
     # path to cookbooks
     chef.cookbooks_path = "cookbooks"
