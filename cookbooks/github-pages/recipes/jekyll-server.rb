@@ -21,8 +21,8 @@ execute "kill all possible jekyll processes" do
   action :run
 end
 
-execute "start jekyll 'http://jkeyll-website:80'" do
-  command "jekyll serve --port 80 --detach --source /var/www/jkeyll-website/"
+execute "start automatic building of 'jekyll-example' with jekyll" do
+  command "jekyll build --source /var/www/jekyll-example/ --destination /tmp/jekyll/sites/jekyll-example/"
   user "root"
   action :run
 end

@@ -60,8 +60,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Folder to be mounted within the VM.
 
-  # jekyll website
-  config.vm.synced_folder "../website", "/var/www/jkeyll-website", :mount_options => ["uid=33", "dmode=777", "fmode=777"]
+  # jekyll websites
+  config.vm.synced_folder "../jekyll-example", "/var/www/jekyll-example", :mount_options => ["uid=33", "dmode=777", "fmode=777"]
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
@@ -81,6 +81,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "nodejs"
     chef.add_recipe "rubygems"
     chef.add_recipe "github-pages"
+
+    # json config used in the recipes
+    chef.json = {
+      "jekyll-hosts" => {
+        "jekyll-example" => {"port" => 80, "name" => "jekyll-example"}
+      }
+    }
 
   end
 end
