@@ -82,12 +82,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "rubygems"
     chef.add_recipe "github-pages"
 
-    # json config used in the recipes
-    chef.json = {
-      "jekyll-hosts" => {
-        "jekyll-example" => {"port" => 80, "name" => "jekyll-example"}
-      }
-    }
-
   end
 end

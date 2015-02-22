@@ -9,7 +9,7 @@ Software required to be installed before:
 * Putty - http://www.putty.org
 * GitHub - https://windows.github.com/
 
-**Tested with:** VirtualBox 4.3, Vagrant 1.6.5
+**Tested with:** VirtualBox 4.3.20, Vagrant 1.6.5
 
 Cookbooks & receipts based on the requirements defined on:
 ------------------------------------------------------------------
@@ -24,11 +24,22 @@ Cookbooks:
 * ruby
 * rubygems
 
-Useful Commands:
+Start jekyll server (as root):
 ------------------------------------------------------------------
 ```
-jekyll --help
-sudo jekyll serve --port 80 --verbose --watch
+jekyll serve --source /var/www/jekyll-example/ --destination /tmp/jekyll/sites/jekyll-example/ --port 80 --watch --force_polling
+```
+
+Building page (as root):
+------------------------------------------------------------------
+```
+jekyll build --source /var/www/jekyll-example/ --destination /tmp/jekyll/sites/jekyll-example/ --watch --force_polling
+```
+
+Kill jekyll's (as root):
+------------------------------------------------------------------
+```
+sudo kill -9 $(ps opid= -C jekyll)
 ```
 
 Useful Links:

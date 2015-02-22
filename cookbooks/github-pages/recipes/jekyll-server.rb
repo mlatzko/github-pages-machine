@@ -22,7 +22,7 @@ execute "kill all possible jekyll processes" do
 end
 
 execute "start automatic building of 'jekyll-example' with jekyll" do
-  command "jekyll build --source /var/www/jekyll-example/ --destination /tmp/jekyll/sites/jekyll-example/"
+  command "jekyll serve --source /var/www/jekyll-example/ --destination /tmp/jekyll/sites/jekyll-example/ --port 80 --watch --force_polling --detach"
   user "root"
   action :run
 end
