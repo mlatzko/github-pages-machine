@@ -11,6 +11,10 @@ Software required to be installed before:
 
 **Tested with:** VirtualBox 4.3.20, Vagrant 1.6.5
 
+Other repositories required:
+------------------------------------------------------------------
+CLONE - https://github.com/mlatzko/jekyll-example
+
 Cookbooks & receipts based on the requirements defined on:
 ------------------------------------------------------------------
 https://help.github.com/articles/using-jekyll-with-pages
