@@ -33,7 +33,7 @@ Start jekyll server (as root):
 ```
 jekyll serve --source /var/www/jekyll-example/ --destination /tmp/jekyll/sites/jekyll-example/ --port 80 --watch --force_polling
 ```
-After starting a jekyll server it avaiable in you browser under http://localhost:8080/
+After starting a jekyll server it avaiable in you browser under http://localhost:8080/.
 
 Building page (as root):
 ------------------------------------------------------------------
