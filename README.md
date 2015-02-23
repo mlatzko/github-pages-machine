@@ -13,7 +13,7 @@ Software required to be installed before:
 
 Other repositories required:
 ------------------------------------------------------------------
-CLONE - https://github.com/mlatzko/jekyll-example
+CLONE - https://github.com/mlatzko/jekyll-example - This repository is used in the Vagrantfile as sync folder.
 
 Cookbooks & receipts based on the requirements defined on:
 ------------------------------------------------------------------
