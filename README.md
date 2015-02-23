@@ -31,14 +31,14 @@ Cookbooks:
 Start jekyll server (as root):
 ------------------------------------------------------------------
 ```
-jekyll serve --source /var/www/jekyll-example/ --destination /tmp/jekyll/sites/jekyll-example/ --port 80 --watch --force_polling
+jekyll serve --source /var/www/jekyll-example/ --destination /tmp/jekyll/sites/jekyll-example/ --port 80 --watch --force_polling --config /var/www/jekyll-example/_config.local.yml
 ```
 After starting a jekyll server it avaiable in you browser under http://localhost:8080/.
 
 Building page (as root):
 ------------------------------------------------------------------
 ```
-jekyll build --source /var/www/jekyll-example/ --destination /tmp/jekyll/sites/jekyll-example/ --watch --force_polling
+jekyll build --source /var/www/jekyll-example/ --destination /tmp/jekyll/sites/jekyll-example/ --watch --force_polling --config /var/www/jekyll-example/_config.local.yml
 ```
 
 Kill jekyll's (as root):
