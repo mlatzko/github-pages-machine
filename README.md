@@ -33,17 +33,17 @@ Starting a jekyll server:
 The basic usage is describe on [jekyllrb.com](http://jekyllrb.com/docs/usage/) page. This is just a short instruction
 for further information look there.
 
-*Command:*
+**Command:**
 ```
 sudo jekyll serve --source <source> --destination <destination> --port <port> --watch --force_polling --config <config>
 ```
-*Example by using tech. study [jekyll-example](https://github.com/mlatzko/jekyll-example)*
+**Example by using tech. study** - [jekyll-example](https://github.com/mlatzko/jekyll-example)
 ```
 jekyll serve --source /var/www/jekyll-example/ --destination /tmp/jekyll/sites/jekyll-exampl --port 80 --watch --force_polling --config /var/www/jekyll-example/_config.local.yml
 ```
-*Notice:* There are two _config.yml one default and one specfic for local development with this machine, the
-reason is that the page is also rendered by github page see [jekyll-example](https://github.com/mlatzko/jekyll-example) repository.
-The example page is available under [http://mlatzko.github.io/jekyll-example/].
+**Notice:** There are two _config.yml file. The first "_config.yml" is use for the [github pages version](http://mlatzko.github.io/jekyll-example/).
+The second one is used for this machine and is call "_config.local.yml". Be aware of that the if you use the [jekyll-example](https://github.com/mlatzko/jekyll-example)
+without defining the local version of the _config.yml the page will not be rendered correct.
 
 Kill any jekyll's without thinking:
 ------------------------------------------------------------------
