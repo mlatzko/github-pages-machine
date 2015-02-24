@@ -30,8 +30,8 @@ Cookbooks:
 
 Starting a jekyll server:
 ------------------------------------------------------------------
-The basic usage is describe on [jekyllrb.com](http://jekyllrb.com/docs/usage/) page. This is just a short instruction
-for further information look there.
+The basic usage is described here [jekyllrb.com](http://jekyllrb.com/docs/usage/).
+This section here is just a short instruction.
 
 **Command:**
 ```
