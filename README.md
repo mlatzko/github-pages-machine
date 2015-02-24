@@ -43,7 +43,7 @@ jekyll serve --source /var/www/jekyll-example/ --destination /tmp/jekyll/sites/j
 ```
 **Notice:** There are two _config.yml file. The first "_config.yml" is use for the [github pages version](http://mlatzko.github.io/jekyll-example/).
 The second one is used for this machine and is call "_config.local.yml". Be aware of that the if you use the [jekyll-example](https://github.com/mlatzko/jekyll-example)
-without defining the local version of the _config.yml the page will not be rendered correct.
+without defining the local version of the _config.yml while starting via `jekyll serve` the page will not be correct rendered.
 
 Kill any jekyll's without thinking:
 ------------------------------------------------------------------
