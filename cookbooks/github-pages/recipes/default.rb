@@ -21,4 +21,3 @@ include_recipe "nodejs"
 
 include_recipe "github-pages::gem-bundler"
 include_recipe "github-pages::gem-github-pages"
-include_recipe "github-pages::jekyll-server"
