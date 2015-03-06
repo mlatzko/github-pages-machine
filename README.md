@@ -58,6 +58,7 @@ Useful Links:
 * http://www.putty.org/
 * http://jekyllrb.com/
 * http://jekyllrb.com/docs/usage/
+* https://github.com/Shopify/liquid/wiki/Liquid-for-Designers (Template Language)
 
 Copyright and license:
 ------------------------------------------------------------------
